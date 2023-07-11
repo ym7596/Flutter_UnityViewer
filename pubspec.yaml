@@ -33,7 +33,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_unity_widget_web: ^1.0.1
-
+  firebase_core: ^2.14.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

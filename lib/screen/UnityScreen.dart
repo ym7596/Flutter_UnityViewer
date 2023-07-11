@@ -13,10 +13,13 @@ class _UnityScreenState extends State<UnityScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return UnityWebWidget(
-        url: 'http://localhost:${Uri.base.port}/unity/index.html',
-        listenMessageFromUnity: _listenMessageFromUnity,
-        onUnityLoaded: _onUnityLoaded);
+    return Container(
+      child: UnityWebWidget(
+
+          url: 'http://localhost:${Uri.base.port}/unity/index.html',
+          listenMessageFromUnity: _listenMessageFromUnity,
+          onUnityLoaded: _onUnityLoaded),
+    );
   }
 
   @override
