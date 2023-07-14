@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myflutterviewer/screen/UnityScreen.dart';
+import 'package:myflutterviewer/screen/NewUnityScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,6 +31,6 @@ class Homebody extends StatefulWidget {
 class _HomebodyState extends State<Homebody> {
   @override
   Widget build(BuildContext context) {
-    return UnityScreen();
+    return UnityScreenWeb();
   }
 }
