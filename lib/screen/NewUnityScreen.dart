@@ -6,40 +6,32 @@ import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 class UnityScreenWeb extends StatefulWidget {
   const UnityScreenWeb({Key? key}) : super(key: key);
 
-
-
   @override
   State<UnityScreenWeb> createState() => _UnityScreenWebState();
 }
 
 class _UnityScreenWebState extends State<UnityScreenWeb> {
-
   UnityWidgetController? _unityWidgetController;
 
   @override
   Widget build(BuildContext context) {
-    return
-
-           Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-             crossAxisAlignment: CrossAxisAlignment.center,
-             children: [
-
-
-                  SizedBox(
-
-                    child: UnityWidget(onUnityCreated: onUnityCreated,
-          onUnityMessage: onUnityMessage,
-                      onUnitySceneLoaded: onUnitySceneLoaded,
-          fullscreen: false,
-                      useAndroidViewSurface: false),
-                  ),
-
-             ],
-           );
-
-
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(
+          height: 800,
+          child: UnityWidget(
+              onUnityCreated: onUnityCreated,
+              onUnityMessage: onUnityMessage,
+              onUnitySceneLoaded: onUnitySceneLoaded,
+              fullscreen: false,
+              useAndroidViewSurface: false),
+        ),
+      ],
+    );
   }
+
   void onUnityMessage(message) {
     print('Received message from unity: ${message.toString()}');
   }
