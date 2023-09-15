@@ -18,16 +18,27 @@ class _UnityScreenWebState extends State<UnityScreenWeb> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        UnityWidget(onUnityCreated: onUnityCreated,
-        onUnityMessage: onUnityMessage,
-            onUnitySceneLoaded: onUnitySceneLoaded,
-        fullscreen: false,
-            useAndroidViewSurface: false),
+    return
 
-      ],
-    );
+           Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             crossAxisAlignment: CrossAxisAlignment.center,
+             children: [
+
+
+                  SizedBox(
+
+                    child: UnityWidget(onUnityCreated: onUnityCreated,
+          onUnityMessage: onUnityMessage,
+                      onUnitySceneLoaded: onUnitySceneLoaded,
+          fullscreen: false,
+                      useAndroidViewSurface: false),
+                  ),
+
+             ],
+           );
+
+
   }
   void onUnityMessage(message) {
     print('Received message from unity: ${message.toString()}');
