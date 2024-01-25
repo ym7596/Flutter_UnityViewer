@@ -19,14 +19,19 @@ class _UnityScreenWebState extends State<UnityScreenWeb> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          height: 800,
-          child: UnityWidget(
-              onUnityCreated: onUnityCreated,
-              onUnityMessage: onUnityMessage,
-              onUnitySceneLoaded: onUnitySceneLoaded,
-              fullscreen: false,
-              useAndroidViewSurface: false),
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+             border: Border.all()
+            ),
+            
+            child: UnityWidget(
+                onUnityCreated: onUnityCreated,
+                onUnityMessage: onUnityMessage,
+                onUnitySceneLoaded: onUnitySceneLoaded,
+                fullscreen: false,
+                useAndroidViewSurface: false),
+          ),
         ),
       ],
     );
